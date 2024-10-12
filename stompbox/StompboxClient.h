@@ -7,10 +7,11 @@
 #include <windows.h>
 #include <ws2tcpip.h>
 #pragma comment (lib, "Ws2_32.lib")
-#elif __linux__
+#elif __unix__
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/socket.h>
+#include <netinet/in.h>
 #include <netdb.h>
 #include <cstring>
 #define SOCKET_ERROR -1
